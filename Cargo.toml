@@ -1,0 +1,8 @@
+[package]
+name = "webserver-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4.22"
+yaml-rust2 = "0.8.1"
