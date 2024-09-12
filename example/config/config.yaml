@@ -1,7 +1,7 @@
 ---
   base_url: "127.0.0.1:8080"
-  root: "tests/html"
+  root: "example/html"
 ---
   base_url: "127.0.0.1:8081"
-  root: "tests/html"
+  root: "example/html"
 
