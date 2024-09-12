@@ -66,12 +66,14 @@ fn main() {
 
     loop {
         for (index, listener) in listeners.iter().enumerate() {
-            let config = collected_docs.get(index).unwrap();
             for stream in listener.incoming() {
                 match stream {
                     Ok(s) => {
+                        let config = collected_docs.clone();
                         // do something with the TcpStream
-                            handle_stream(s, config);
+                        pool.execute(move || {
+                            handle_stream(s, config.get(index).unwrap());
+                        });
                     }
                     Err(ref e) if e.kind() == io::ErrorKind::WouldBlock => {
                         break;

@@ -2,7 +2,7 @@ pub mod request {
     use std::fs::File;
     use std::io::Read;
     use std::path::Path;
-    #[derive(Hash, Debug)]
+    #[derive(Hash, Debug, Clone)]
     pub struct Config {
         pub base_url: String,
         pub root: String,
