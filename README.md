@@ -1,6 +1,7 @@
 # Basic Rust Web server supporting multithreading
 
 Currently, supports GET requests only. :)
+Project is for learning purposes.
 
 Multi threading implemented using official guide from Rust Book https://doc.rust-lang.org/beta/book/ch20-02-multithreaded.html
 
@@ -13,6 +14,11 @@ Features:
 Run:
 ```bash
 cargo run example/config/config.yaml
+```
+
+Test:
+```bash
+cargo test
 ```
 
 Config file:
